@@ -5,8 +5,9 @@ import {
   Login,
   DashboardLayout,
   Error,
+  Landing
 } from './pages';
-import Landing from './pages/Landing';
+
 
 const router = createBrowserRouter([
   {

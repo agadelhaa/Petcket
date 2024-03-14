@@ -1,0 +1,1 @@
+export {default as Logotipo} from "./Logotipo.jsx"
