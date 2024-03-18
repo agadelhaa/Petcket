@@ -5,7 +5,12 @@ import {
   Login,
   DashboardLayout,
   Error,
-  Landing
+  Landing,
+  Stats,
+  AddPurchase,
+  AllPurchases,
+  Admin,
+  Profile,
 } from './pages';
 
 
@@ -30,6 +35,28 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <DashboardLayout />,
+        children: [
+          {
+            index: true,
+            element: <Stats />,
+          },
+          {
+            path: "add-purchase",
+            element: <AddPurchase />,
+          },
+          {
+            path: "admin",
+            element: <Admin />,
+          },
+          {
+            path:"all-purchases",
+            element: <AllPurchases />,
+          },
+          {
+            path:"profile",
+            element: <Profile />
+          }
+        ],
       },
     ],
   },

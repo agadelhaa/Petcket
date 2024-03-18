@@ -3,6 +3,7 @@ import styled from "styled-components";
 import main from "../assets/images/main.svg";
 import "../assets/css/index.css";
 import { Logotipo } from "../assets/components";
+import main2 from '../assets/images/main2.svg'
 
 
 const Landing = () => {
@@ -10,7 +11,7 @@ const Landing = () => {
     <Wrapper>
       <div className="page">
         <nav>
-          <Logotipo/>
+          <Logotipo />
         </nav>
         <div className="content">
           <div>
@@ -20,15 +21,20 @@ const Landing = () => {
             <h2>
               Bem-vindo ao <span>Petcket</span>,
             </h2>
-            <p>A pocket wallet ideal para administar os gastos alimentares do seu pet! </p>
+            <p>
+              A pocket wallet ideal para administar os gastos alimentares do seu
+              pet!{" "}
+            </p>
             <div className="btns">
-
-            <Link to="/register" className="btnRegister">
-              Sign Up
-            </Link>
-            <Link to="/login" className="btn">
-              Sign In
-            </Link>
+              <Link to="/register" className="btnRegister">
+                Sign Up
+              </Link>
+              <Link to="/login" className="btn">
+                Sign In
+              </Link>
+            </div>
+            <div>
+              <img src={main2} alt="graphics" className="graphic" />
             </div>
           </div>
         </div>
@@ -72,7 +78,7 @@ const Wrapper = styled.div`
     padding: 0.6em 2.4em;
     font-size: 1em;
     font-weight: 500;
-    background-color: ##e2e8f0;
+    background-color: #e2e8f0;
     color: #2ec4b6;
     cursor: pointer;
     transition: background-color 0.25s;
@@ -95,9 +101,8 @@ const Wrapper = styled.div`
   }
   .btns {
     display: flex;
-    /* flex-direction: column; */
-    background-color: red;
     width: 100%;
+    justify-content: space-evenly;
   }
   h2 {
     margin-bottom: 32px;
@@ -110,6 +115,10 @@ const Wrapper = styled.div`
   }
   img {
     height: 400px;
+  }
+  .graphic{
+    height: 200px;
+    margin-top: 16px;
   }
 `;
 

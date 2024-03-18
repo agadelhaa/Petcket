@@ -11,15 +11,19 @@ const Logotipo = () => {
 }
 
 // const Container = styled.div`
-//   .title {
+// .title {
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
+//     margin-bottom: 12px;
 //   }
 //   .logo {
-//     width: 42px;
-//     height: 42px;
+//     width: 50px;
+//     height: 50px;
 //     margin-right: 8px;
+//   }
+//   h3 {
+//     color: #ff9f1c;
 //   }
 // `;
 
