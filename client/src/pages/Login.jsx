@@ -27,7 +27,7 @@ const Login = () => {
     <Wrapper>
       <Form method="post" className="form">
         <Logotipo />
-        <h4>Acesse sua conta aqui:</h4>
+        <h4>Acesse sua conta:</h4>
         <FormRow type="email" name="email" />
         <FormRow
           type="password"

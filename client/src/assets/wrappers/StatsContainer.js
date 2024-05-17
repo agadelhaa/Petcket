@@ -1,14 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.section`
-  display: grid;
-  row-gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
+    padding: 2rem;
   }
+
   @media (min-width: 1120px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 3rem;
   }
 `;
+
 export default Wrapper;

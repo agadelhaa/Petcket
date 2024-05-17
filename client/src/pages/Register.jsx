@@ -27,7 +27,7 @@ const Register = () => {
     <Wrapper>
       <Form method='post'className="form">
         <Logotipo />
-        <h4>Registre-se aqui:</h4>
+        <h4>Crie sua conta:</h4>
         <FormRow
           type="text"
           name="name"

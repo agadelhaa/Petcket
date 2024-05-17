@@ -41,7 +41,7 @@ export const getAllPurchase = async (req, res) => {
     'a-z': 'brand',
     'z-a': '-brand',
   };
-  const sortKey = sortOptions[sort] || sortOptions['mais recentes'];
+  const sortKey = sortOptions[sort] || sortOptions['mais recente'];
 
   // paginação
   const page = Number(req.query.page) || 1;

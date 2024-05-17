@@ -27,8 +27,8 @@ const Landing = () => {
               pet!{" "}
             </p>
             <div className="btns">
-              <Link to="/register" className="btnRegister">
-                Registre-se
+              <Link to="/register" className="btn">
+                Registrar
               </Link>
               <Link to="/login" className="btn">
                 Entrar

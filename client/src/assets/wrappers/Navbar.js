@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.nav`
+  width: 100%;
   height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -9,8 +10,11 @@ const Wrapper = styled.nav`
   background: var(--background-secondary-color);
 
   .nav-center {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
-    width: 90vw;
     align-items: center;
     justify-content: space-between;
   }

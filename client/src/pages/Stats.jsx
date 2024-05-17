@@ -12,6 +12,7 @@ import {
   defaults,
 } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
+import Wrapper from '../assets/wrappers/StatsContainer';
 
   defaults.maintainAspectRatio = false;
   defaults.responsive = true;
@@ -30,7 +31,7 @@ const Stats = () => {
   const [monthlySums, setMonthlySums] = useState([]);
 
     const totalsForGraphic = Array.from({ length: 12 }, (_, i) => {
-      const monthIndex = i + 1; // since months in _id are 1-based (1 for January, etc.)
+      const monthIndex = i + 1; 
       const monthData = monthlySums.find((item) => item._id === monthIndex);
       return monthData ? monthData.total : 0;
     });
@@ -91,17 +92,32 @@ const Stats = () => {
 
   console.log("estamos recebendo issooooo", monthlySums)
   return (
+    <Wrapper>
+
     <div>
       <YearDropdown onMonthlySumsChange = {setMonthlySums}/>
       <GraphicContainer>
         <Bar options={options} data={data} />
       </GraphicContainer>
     </div>
+    </Wrapper>
   )
 }
 
-const GraphicContainer = styled.div `
+const GraphicContainer = styled.div`
+  width: 100%;
   height: 300px;
-`
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+  @media (min-width: 1120px) {
+    height: 500px;
+  }
+  canvas {
+    width: 100% !important;
+    height: 100% !important;
+  }
+`;
+
 
 export default Stats
